@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Dashboard",
+        "url": "dashboard"
+    },
+    {
+        "name": "Icons",
+        "url": "icons"
+    },
+    {
+        "name": "Forms",
+        "url": "forms"
+    },
+    {
+        "name": "Charts",
+        "url": "charts"
+    },
+    {
+        "name": "Tables",
+        "url": "tables"
+    }
+]

@@ -1,0 +1,18 @@
+<div class="left-sidebar">
+  <div class="input-group m-auto">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fal fa-search"></i></span>
+    </div>
+    <input type="text" class="form-control pl-0" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <ul *ngFor="let item of data">
+    <li>
+      <a [routerLink]="[item.url]" (click)="showsub()"><i [class]=item.class></i> {{item.name}} <i class="fal fa-angle-right float-right menu-arrow"></i></a>
+      <div *ngIf="submenu">
+        <ul class="sub-menu" *ngFor="let sub of item.submenu">
+          <li><a href="">{{sub.name}}</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>

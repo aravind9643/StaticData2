@@ -1,0 +1,49 @@
+<div class="page-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-title">
+              <h2>Students</h2>
+            </div>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>DOB</th>
+                    <th>Course</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of data; let i = index">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td><span [class]=item.class>{{item.status}}</span></td>
+                    <td>{{item.dob}}</td>
+                    <td>{{item.course}}</td>
+                    <td class="color-primary">{{item.address}}</td>
+                    <td> <a href="" (click)="!!remove(item)"><i class="fas fa-times"></i></a></td>
+                    <td> <a href="" [routerLink]="['form', i]"><i class="fas fa-edit"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary m-2" [disabled]="prevlength == 0" (click)="prev()">Prev</button>
+        {{page}}
+        <button type="submit" class="btn btn-primary m-2" [disabled]="nextlength == 20" (click)="next()">Next</button>
+      </div>
+    </div>
+  </div>
+</div>

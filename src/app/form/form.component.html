@@ -1,0 +1,112 @@
+<div class="page-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-title">
+              <h2 class="mb-4">Registration Form</h2>
+            </div>
+            <div class="row mb-3">
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="firstName">ID</label>
+                  <input [(ngModel)]="form.id" type="text" class="form-control" id="id" aria-describedby="id"
+                    placeholder="Enter ID">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="firstName">Name</label>
+                  <input [(ngModel)]="form.name" type="text" class="form-control" id="name" aria-describedby="name"
+                    placeholder="Enter Name">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="row pt-2">
+                  <legend class="col-form-label col-3 pt-0">Gender</legend>
+                  <div class="col-sm-8">
+                    <div class="form-group">
+                      <div class="form-check form-check-inline">
+                        <input [(ngModel)]="form.gender" class="form-check-input" type="radio" name="gender" id="maleOption"
+                          value="Male">
+                        <label class="form-check-label" for="maleOption">
+                          Male
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input [(ngModel)]="form.gender" class="form-check-input" type="radio" name="gender" id="femaleOption"
+                          value="Female">
+                        <label class="form-check-label" for="femaleOption">
+                          Female
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Address</label>
+                  <textarea [(ngModel)]="form.address" class="form-control" id="address" rows="1" placeholder="Enter Address"></textarea>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="dateField">DOB</label>
+                  <input [(ngModel)]="form.dob" type="date" class="form-control" id="dateField" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="employees">Course</label>
+                  <select [(ngModel)]="form.course" class="form-control" id="employees" required>
+                    <option value="">Select</option>
+                    <option value="MCA">MCA</option>
+                    <option value="MBA">MBA</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="employees">Status</label>
+                  <select [(ngModel)]="form.status" class="form-control" id="employees">
+                    <option value="">Select</option>
+                    <option value="DONE">Done</option>
+                    <option value="Progress">Progress</option>
+                    <option value="On Hold">On Hold</option>
+                    <option value="Rejected">Rejected</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="form-group">
+                  <div class="form-check form-check-inline">
+                    <input [(ngModel)]="form.sc__sc_student__gender5c1c6de634841d67f32c709f" class="form-check-input"
+                      type="checkbox" name="accept" id="accept" value="Male">
+                    <label class="form-check-label" for="accept">
+                      Accept
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row pt-3">
+              <div class="col-12 text-right">
+                <button type="submit" *ngIf="!id" class="btn btn-primary" (click)="save(form)">Submit</button>
+                <button type="submit" *ngIf="id" class="btn btn-primary" (click)="modify(form)">Modify</button>
+                <button type="button" class="btn btn-outline-primary">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../src/assets/css/app.css';
+@import '../src/assets/css/vendor/britecharts.min.css';
+@import '../src/assets/css/vendor/buttons.bootstrap4.css';
+@import '../src/assets/css/vendor/dataTables.bootstrap4.css';
+@import '../src/assets/css/vendor/fullcalendar.min.css';
+@import '../src/assets/css/vendor/responsive.bootstrap4.css';
+@import '../src/assets/css/vendor/select.bootstrap4.css';
